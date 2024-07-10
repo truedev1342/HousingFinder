@@ -110,7 +110,7 @@ azd down
 
 # Screenshots
 #### Welcome page
-![](https://github.com/ryannninodizon/msal-angular17-with-listdata/blob/main/Screenshots/welcome-pag.JPG)
+![](https://github.com/softdev1012/HousingFinder/blob/main/deployed-to-azure.JPG)
 
 
 #### List page
