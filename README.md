@@ -106,7 +106,7 @@ azd up
 # Delete any created servcices/resouces when you don't need it anymore
 azd down
 ```
-
+![](https://github.com/softdev1012/HousingFinder/blob/main/azd-execution.JPG)
 
 # Screenshots
 #### Welcome page
