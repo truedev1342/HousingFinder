@@ -1,1 +1,50 @@
 .azure
+.vs
+.vscode
+.claude
+
+# ---------------------------------------------------------------------------
+# Build output
+#
+# These are deliberately UNANCHORED (no leading slash) so they apply to every
+# project in the repo, including src/api and src/web. The .gitignore files in
+# backend-azure-functions/ and frontend-angular/ use anchored patterns and so
+# only cover their own directory.
+# ---------------------------------------------------------------------------
+
+# .NET / Azure Functions
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
+publish/
+*.dll
+*.exe
+*.pdb
+*.user
+*.suo
+*.cache
+
+# Node / Angular
+node_modules/
+dist/
+tmp/
+out-tsc/
+bazel-out/
+.angular/
+*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+
+# Test / coverage output
+coverage/
+[Tt]est[Rr]esult*/
+testem.log
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.history/
+*.swp

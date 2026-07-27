@@ -1,6 +1,6 @@
-# Azure Serverless Template using Angular-standalone, Azure Functions App, Cosmos DB and APIM
+# HousingFinder
 
-I built this template project using Angular17-Standalone, Azure Functions, CosmosDB and APIM, along with MSAL (Microsoft Authentication Library) for authentication and authorization. I hope this will serve as a useful starting point for anyone exploring serverless development and the Microsoft Identity platform.
+HousingFinder is a serverless housing-listing application built with Angular17-Standalone, Azure Functions, CosmosDB and APIM, along with MSAL (Microsoft Authentication Library) for authentication and authorization. I hope this will serve as a useful starting point for anyone exploring serverless development and the Microsoft Identity platform.
 
 > The integration of MSAL is based on this official MSAL JavaScript template: [msal-angular](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-angular "msal-angular")
 
@@ -8,10 +8,9 @@ I built this template project using Angular17-Standalone, Azure Functions, Cosmo
 
 > The Photos/mages that are being generated are coming from [Lorem Picsum](https://picsum.photos/ "Lorem Picsum")
 
-![](https://github.com/ryannninodizon/Azure-ServerlessApp-Template-for-Dotnet-Angular/blob/main/banner.png)
+# Simple Architecture Diagram
 
-# Simple Architecture Diagram 
-![](https://github.com/ryannninodizon/Azure-ServerlessApp-Template-for-Dotnet-Angular/blob/main/serverless-application-flow.png)
+An Angular standalone SPA authenticates against Microsoft Entra ID with MSAL, calls the Azure Functions backend through Azure API Management, and the functions persist listings in Cosmos DB.
 
 # Prerequisites
 Make sure to install these development tools and SDKs.
@@ -82,20 +81,19 @@ namespace Serverless.Api
 }
 ```
 
-Feel free to watch my YouTube video if you want to see how I created different Azure Services for this **template project**:   [Serverless Backend API using Azure Functions and Cosmos DB](https://youtu.be/D9fWa6KOhHg "Serverless Backend API using Azure Functions and Cosmos DB")
+Feel free to watch my YouTube video if you want to see how I created different Azure Services for **HousingFinder**:   [Serverless Backend API using Azure Functions and Cosmos DB](https://youtu.be/D9fWa6KOhHg "Serverless Backend API using Azure Functions and Cosmos DB")
 
 # Docker Build and Run locally
 ```json
 docker build -t angular-with-msal-template .
 docker run -d -p 8080:80 angular-with-msal-template
 ```
-![](https://github.com/softdev1012/HousingFinder/blob/main/docker-build-and-run.gif)
 
 # Import Azure Function App to Azure API Management
 You can visit this official documentation to learn how to secure and import a Function app to Azure API Management: [Import an Azure Function App as an API in Azure API Management](https://learn.microsoft.com/en-us/azure/api-management/import-function-app-as-api "Import an Azure Function App as an API in Azure API Management")
 
 # Azure Deployment
-Deploying this template project can be easily done using Azure Developer CLI - make sure to install this locally - get it [here](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd?tabs=winget-windows%2Cbrew-mac%2Cscript-linux&pivots=os-windows "here").
+Deploying HousingFinder can be easily done using Azure Developer CLI - make sure to install this locally - get it [here](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd?tabs=winget-windows%2Cbrew-mac%2Cscript-linux&pivots=os-windows "here").
 ```bash
 # Make sure to login to your Azure Subscription account by executing this azd command 
 azd auth login
@@ -109,14 +107,4 @@ azd up
 # Delete any created servcices/resouces when you don't need it anymore
 azd down
 ```
-![](https://github.com/softdev1012/HousingFinder/blob/main/azd-execution.JPG)
-
-# Screenshots
-#### Welcome page
-![](https://github.com/softdev1012/HousingFinder/blob/main/deployed-to-azure.JPG)
-
-
-#### List page (local build)
-![](https://github.com/ryannninodizon/msal-angular17-with-listdata/blob/main/Screenshots/list-page.JPG)
-
 
